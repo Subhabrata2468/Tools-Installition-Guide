@@ -99,12 +99,34 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
   sudo chmod +x /usr/local/bin/docker-compose
   ```
   ```
-  sudo usermod -aG docker ubuntu
+  sudo groupadd docker
   ```
-ubuntu Replace with your system's username, e.g., 'linux'
+  ```
+  sudo usermod -aG docker $USER
+  ```
+  Replace $USER (whole including $) with your system's username, e.g., 'ubuntu'
+  ```
+  newgrp docker
+  ```
+  ```
+  groups $USER
+  ```
+  Replace $USER (whole including $) with your same system's username,what you have given earlier e.g., 'ubuntu'
   ```
   sudo docker compose up
   ```
+
+If you get docker login failed error
+  ```
+  sudo usermod -aG docker jenkins
+  ```
+  ```
+  sudo systemctl restart jenkins
+  ```
+  ```
+  groups jenkins
+  ```
+sudo systemctl restart jenkins
 [FOR MORE INFO](https://docs.docker.com/engine/install/)
 
 ### OWASP (Dependencies Check)
