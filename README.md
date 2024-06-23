@@ -99,7 +99,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
   sudo chmod +x /usr/local/bin/docker-compose
   ```
   ```
-  sudo usermod -aG docker $ubuntu
+  sudo usermod -aG docker $ubuntu   # Replace with your system's username, e.g., 'ubuntu'
   ```
   ```
   sudo docker compose up
