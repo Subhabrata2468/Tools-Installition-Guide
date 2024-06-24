@@ -282,6 +282,10 @@ Together, Node exporter, Prometheus, and Grafana form a powerful monitoring stac
 * Configure Prometheus Plugin Integration:
   
   To configure Prometheus to scrape metrics from **Node Exporter** and **ANY TOOLS**, you need to modify the **prometheus.yml** file. Here is an example **prometheus.yml** configuration for your setup:
+  Location:
+  ```
+  sudo vim /etc/prometheus/prometheus.yml
+  ```
 
   ```
   global:
